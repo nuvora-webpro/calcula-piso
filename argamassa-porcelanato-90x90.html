@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f9f8f3">
+  <meta name="description" content="Calcule quantos sacos de argamassa comprar para porcelanato 90 × 90 cm. Ajuste a área, o consumo indicado pelo fabricante, a margem e o peso do saco.">
+  <link rel="canonical" href="https://calcula-piso.vercel.app/argamassa-porcelanato-90x90">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Argamassa para porcelanato 90 × 90: quantos sacos comprar?">
+  <meta property="og:description" content="Faça a conta com o consumo do seu produto e veja a quantidade de sacos inteiros.">
+  <meta property="og:url" content="https://calcula-piso.vercel.app/argamassa-porcelanato-90x90">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de argamassa para porcelanato 90 × 90","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"pt-BR","isAccessibleForFree":true,"description":"Estima sacos de argamassa para porcelanato 90 × 90 cm com consumo editável."}</script>
+  <title>Argamassa para Porcelanato 90 × 90: Quantos Sacos? | Calcula Piso</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/redesign.css">
+  <script defer src="/argamassa-90x90.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#calculadora-argamassa">Pular para a calculadora</a>
+  <header class="site-header"><div class="shell header-inner"><a class="logo" href="/" aria-label="Calcula Piso, página inicial"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>calcula<span class="logo-accent">piso</span></span></a><nav aria-label="Navegação principal"><a href="/#calculadora">Calculadora completa</a><a href="#como-calcular">Como calcular</a><a href="#perguntas">Dúvidas</a></nav></div></header>
+  <main class="shell specialty-page">
+    <nav class="breadcrumb" aria-label="Você está aqui"><a href="/">Início</a><span aria-hidden="true">/</span><span>Argamassa para porcelanato 90 × 90</span></nav>
+    <header class="specialty-intro"><p class="overline">Calculadora de argamassa</p><h1>Porcelanato 90 × 90.<br>Quantos sacos de argamassa?</h1><p>Informe a área e o consumo da argamassa escolhida. A conta mostra os quilos necessários, os sacos inteiros e a fórmula usada.</p></header>
+    <div class="specialty-grid" id="calculadora-argamassa">
+      <form id="mortar-form" class="specialty-form" novalidate>
+        <h2>Faça a conta para sua obra</h2>
+        <p>Use o consumo da ficha técnica ou da embalagem. Os valores iniciais abaixo são só um exemplo.</p>
+        <div class="specialty-fields">
+          <label>Área a revestir <span>m²</span><input id="area" type="number" inputmode="decimal" min="0.01" max="100000" step="0.01" value="20" required></label>
+          <label>Consumo da argamassa <span>kg/m²</span><input id="rate" type="number" inputmode="decimal" min="0.1" max="50" step="0.1" value="9" required></label>
+          <label>Margem para aplicação <span>%</span><input id="loss" type="number" inputmode="decimal" min="0" max="100" step="1" value="10" required></label>
+          <label>Peso do saco <span>kg</span><input id="bag" type="number" inputmode="decimal" min="0.1" max="100" step="0.1" value="20" required></label>
+          <label>Preço por saco <span>R$ · opcional</span><input id="price" type="number" inputmode="decimal" min="0" max="100000" step="0.01" placeholder="Ex.: 45,00"></label>
+        </div>
+        <p class="field-help">O exemplo de 9 kg/m² aparece na <a href="https://www.portobello.com.br/produtos/abrir/6321/catalogo_final_argamassa_rejuntes_eng_web.pdf">tabela de consumo da Portobello</a> para peças de 7.000 a 14.399 cm², com dupla colagem. Uma peça 90 × 90 cm tem 8.100 cm². Confira a indicação do produto que você vai usar.</p>
+        <p class="form-error" id="mortar-error" role="alert" hidden></p>
+        <button class="calculate-button" type="submit">Atualizar cálculo</button>
+      </form>
+      <section class="specialty-result" aria-live="polite" aria-labelledby="answer-title">
+        <p class="overline">Sua lista de compras</p><h2 id="answer-title"><span id="bags">10</span> sacos de <span id="bag-size">20</span> kg</h2>
+        <p id="weight">198 kg estimados para 20 m².</p>
+        <div class="answer-math"><strong>A conta</strong><span id="formula">20 m² × 9 kg/m² × 1,10 = 198 kg<br>198 kg ÷ 20 kg = 9,9 → 10 sacos</span></div>
+        <p id="cost" hidden></p>
+        <small>Arredondamos para cima porque a compra é feita por sacos inteiros. O consumo real depende da argamassa, da base, da desempenadeira e da aplicação.</small>
+      </section>
+    </div>
+    <section class="specialty-copy" id="como-calcular"><h2>Como calcular argamassa para porcelanato 90 × 90</h2><p>Multiplique a área a revestir pelo consumo em kg/m² indicado para a argamassa e o método de assentamento. Se quiser prever perdas de aplicação, acrescente uma margem. Depois divida pelo peso do saco e arredonde para cima.</p><p>No exemplo de 20 m², consumo de 9 kg/m², margem de 10% e saco de 20 kg: 20 × 9 × 1,10 = 198 kg. Como 198 ÷ 20 = 9,9, a lista pede 10 sacos. Se a ficha técnica do produto indicar outro consumo, substitua os 9 kg/m² no campo acima.</p><h3>O tamanho da peça não determina sozinho o consumo</h3><p>Um porcelanato de 90 × 90 cm tem 8.100 cm². A <a href="https://www.portobello.com.br/produtos/abrir/6321/catalogo_final_argamassa_rejuntes_eng_web.pdf">tabela publicada pela Portobello</a> apresenta consumo aproximado de 9 kg/m² na faixa de 7.000 a 14.399 cm², com desempenadeira de 10 × 10 × 10 mm e dupla colagem. A própria tabela informa que o consumo pode variar conforme a desempenadeira e as condições da base. Não trate esse exemplo como especificação universal.</p><p>Para calcular também as caixas de porcelanato e o rejunte, use a <a href="/#calculadora">calculadora completa de porcelanato</a>.</p></section>
+    <section class="specialty-faq" id="perguntas"><h2>Perguntas frequentes</h2><details><summary>Quantos sacos de argamassa para 20 m² de porcelanato 90 × 90?</summary><p>Com consumo de 9 kg/m², margem de 10% e sacos de 20 kg, são 10 sacos. O número muda se o fabricante indicar outro consumo ou outro peso de embalagem.</p></details><details><summary>Posso usar 9 kg/m² para qualquer marca?</summary><p>Não. Esse número é um exemplo de uma tabela específica da Portobello. Confira a embalagem e a ficha técnica da argamassa escolhida, inclusive a indicação para o local de aplicação e para o tamanho da peça.</p></details><details><summary>A margem das caixas de piso entra nesta conta?</summary><p>Não. Recortes e quebras afetam a compra de peças. A margem da argamassa é separada e serve para perdas durante a aplicação.</p></details></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-grid"><div><a class="logo footer-logo" href="/">calculapiso</a><p>Uma conta mais clara para comprar melhor.</p></div><div><strong>Ferramentas</strong><a href="/#calculadora">Calculadora de porcelanato</a><a href="/argamassa-porcelanato-90x90">Argamassa para 90 × 90</a></div><div><strong>Informações</strong><a href="/sobre">Sobre</a><a href="/privacidade">Privacidade</a></div></div></footer>
+</body>
+</html>
