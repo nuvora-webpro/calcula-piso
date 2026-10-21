@@ -13,6 +13,6 @@ Os consumos iniciais são exemplos editáveis, não especificações de um produ
 
 ## Publicação
 
-O projeto pode ser importado no Vercel como **Other** com diretório raiz nesta pasta e sem comando de build. `vercel.json` ativa URLs limpas. O plano Hobby do Vercel é restrito a uso pessoal não comercial; um site com AdSense exige um plano compatível ou outro host. Depois de obter o endereço definitivo, adicionar uma URL canônica e um `sitemap.xml` com URLs absolutas. Antes de ativar anúncios ou análise, atualizar `privacidade.html`.
+O projeto pode ser importado no Vercel como **Other** com diretório raiz nesta pasta e sem comando de build. `vercel.json` ativa URLs limpas. O plano Hobby do Vercel é restrito a uso pessoal não comercial; um site com AdSense exige um plano compatível ou outro host. A URL canônica atual é `https://calcula-piso.vercel.app/`; `sitemap.xml` e `robots.txt` usam esse endereço. Ao adicionar um domínio próprio, atualize as URLs absolutas nesses arquivos e nas metatags das três páginas. Antes de ativar anúncios ou análise, atualizar `privacidade.html`.
 
 Nenhum identificador de Analytics, Search Console ou AdSense está incluído nesta versão.

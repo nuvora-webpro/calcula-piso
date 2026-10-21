@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://calcula-piso.vercel.app/sitemap.xml
