@@ -45,6 +45,7 @@ function calculate(event) {
   el('cost-row').hidden = !enteredPrices; el('cost-result').textContent = brl(total); el('results-content').hidden = false;
   const largeTile = number('tile-width') * number('tile-length') > 900;
   el('result-note').textContent = largeTile ? 'Peça acima de 30 × 30 cm: confira na ficha técnica se a aplicação exige dupla colagem e qual consumo de argamassa usar. Confirme todos os rendimentos antes de comprar.' : 'Quantidade estimada. Confira o rendimento e a indicação de uso nas embalagens antes de comprar.';
+  window.trackCalculatorUse?.('porcelanato');
   if (window.innerWidth < 800) el('results-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 el('add-room').addEventListener('click', () => addRoom()); el('calculator').addEventListener('submit', calculate);

@@ -33,6 +33,7 @@
     get('formula').innerHTML = `${format.format(area)} m² × ${format.format(rate)} kg/m² × ${format.format(factor)} = ${format.format(kilograms)} kg<br>${format.format(kilograms)} kg ÷ ${format.format(bag)} kg = ${format.format(exactBags)} → ${format.format(bags)} sacos`;
     get('cost').hidden = price === null;
     if (price !== null) get('cost').textContent = `Custo estimado: ${money.format(bags * price)} (${format.format(bags)} sacos × ${money.format(price)}).`;
+    if (event?.type === 'submit') window.trackCalculatorUse?.('argamassa_90x90');
   }
 
   form.addEventListener('submit', calculate);
