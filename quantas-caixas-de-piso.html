@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f9f8f3">
+  <meta name="description" content="Calcule quantas caixas de piso comprar por m². Informe comprimento, largura, rendimento da caixa e margem para recortes; veja a conta e o custo estimado.">
+  <link rel="canonical" href="https://calcula-piso.vercel.app/quantas-caixas-de-piso">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Quantas caixas de piso comprar? Calculadora por m²">
+  <meta property="og:description" content="Da medida do cômodo ao número de caixas, com margem para recortes e fórmula aberta.">
+  <meta property="og:url" content="https://calcula-piso.vercel.app/quantas-caixas-de-piso">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de caixas de piso por m²","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"pt-BR","isAccessibleForFree":true,"description":"Calcula caixas inteiras de piso a partir das dimensões do ambiente, cobertura por caixa e margem para recortes."}</script>
+  <title>Quantas Caixas de Piso Comprar? Calculadora por m² | Calcula Piso</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/redesign.css">
+  <script defer src="/analytics.js"></script>
+  <script defer src="/quantas-caixas-de-piso.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#calculadora-caixas">Pular para a calculadora</a>
+  <header class="site-header"><div class="shell header-inner"><a class="logo" href="/" aria-label="Calcula Piso, página inicial"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>calcula<span class="logo-accent">piso</span></span></a><nav aria-label="Navegação principal"><a href="/#calculadora">Calculadora completa</a><a href="#como-calcular">Como calcular</a><a href="#perguntas">Dúvidas</a></nav></div></header>
+  <main class="shell specialty-page">
+    <nav class="breadcrumb" aria-label="Você está aqui"><a href="/">Início</a><span aria-hidden="true">/</span><span>Quantas caixas de piso?</span></nav>
+    <header class="specialty-intro"><p class="overline">Calculadora de piso por m²</p><h1>Quantas caixas de piso<br>você precisa comprar?</h1><p>Meça o cômodo, confira quantos metros quadrados vêm em cada caixa e escolha uma margem para recortes. Veja a quantidade de caixas inteiras antes de ir à loja.</p></header>
+    <div class="specialty-grid" id="calculadora-caixas">
+      <form id="boxes-form" class="specialty-form" novalidate>
+        <h2>Da medida à compra</h2><p>Use as medidas internas da área que receberá o piso. O rendimento em m² está impresso na embalagem do produto.</p>
+        <div class="specialty-fields">
+          <label>Comprimento do ambiente <span>metros</span><input id="length" type="number" inputmode="decimal" min="0.01" max="1000" step="0.01" value="5" required></label>
+          <label>Largura do ambiente <span>metros</span><input id="width" type="number" inputmode="decimal" min="0.01" max="1000" step="0.01" value="4" required></label>
+          <label>Cobertura por caixa <span>m² por caixa</span><input id="coverage" type="number" inputmode="decimal" min="0.01" max="100" step="0.01" value="2.16" required></label>
+          <label>Margem para recortes <span>%</span><select id="loss"><option value="0">0% · sem margem</option><option value="10" selected>10% · assentamento reto</option><option value="15">15% · muitos recortes</option><option value="20">20% · projeto complexo</option></select></label>
+          <label>Preço por caixa <span>R$ · opcional</span><input id="price" type="number" inputmode="decimal" min="0" max="100000" step="0.01" placeholder="Ex.: 120,00"></label>
+        </div>
+        <p class="field-help">A margem é uma estimativa para peças cortadas ou quebradas. Ajuste-a ao desenho do ambiente e converse com o instalador quando houver muitos cantos ou assentamento diagonal.</p>
+        <p class="form-error" id="boxes-error" role="alert" hidden></p>
+        <button class="calculate-button" type="submit">Calcular caixas</button>
+      </form>
+      <section class="specialty-result" aria-live="polite" aria-labelledby="answer-title"><p class="overline">Sua estimativa</p><h2 id="answer-title"><span id="boxes">11</span> <span id="boxes-unit">caixas</span> de piso</h2><p id="area-description">Para um ambiente de 20 m².</p><div class="answer-math"><strong>A conta</strong><span id="formula">5 m × 4 m = 20 m²<br>20 m² × 1,10 = 22 m² com margem<br>22 m² ÷ 2,16 m² por caixa = 10,19 → 11 caixas</span></div><p id="coverage-description">11 caixas cobrem 23,76 m².</p><p id="cost" hidden></p><small>Caixas são vendidas inteiras. Confira o rendimento exato na embalagem e, se possível, compre peças do mesmo lote para evitar diferença de tonalidade.</small></section>
+    </div>
+    <section class="specialty-copy" id="como-calcular"><h2>Como calcular piso por m² e transformar em caixas</h2><p>Primeiro, multiplique o comprimento pela largura do ambiente, ambos em metros. Um cômodo de 5 m por 4 m tem 20 m². Em áreas com formato irregular, divida a planta em retângulos, calcule cada um e some as áreas.</p><p>Depois, acrescente a margem escolhida à área. Com 10% de margem, 20 m² viram 22 m² para a compra. Divida esse total pela cobertura informada na caixa e arredonde para o próximo número inteiro. Se a caixa rende 2,16 m², 22 ÷ 2,16 = 10,19: compre 11 caixas.</p><h3>Por que usar o rendimento da embalagem?</h3><p>O tamanho da peça não informa sozinho quantas peças vêm na caixa. Duas marcas podem vender o mesmo formato com quantidades diferentes por embalagem. Para planejar a compra, use o valor de cobertura em m² da caixa que você realmente escolheu.</p><h3>Quer a lista completa de materiais?</h3><p>Esta página estima somente as caixas de piso. Para somar ambientes e calcular também argamassa e rejunte, use nossa <a href="/#calculadora">calculadora completa de porcelanato</a>. Para peças 90 × 90 cm, há também uma <a href="/argamassa-porcelanato-90x90">calculadora específica de argamassa</a>.</p></section>
+    <section class="specialty-faq" id="perguntas"><h2>Perguntas frequentes</h2><details><summary>Quantas caixas de piso para 20 m²?</summary><p>Com 10% de margem e caixas que cobrem 2,16 m², são 11 caixas: 20 × 1,10 ÷ 2,16 = 10,19, arredondado para cima. Troque o rendimento pelo valor da embalagem escolhida.</p></details><details><summary>Quantos metros quadrados tem uma caixa de piso?</summary><p>Depende do produto e da quantidade de peças na embalagem. Procure a indicação de cobertura em m² na caixa ou na ficha do fabricante; não estime apenas pelo tamanho da peça.</p></details><details><summary>A margem de 10% serve para toda obra?</summary><p>Não. Ela é um ponto de partida para assentamento simples. Diagonais, muitos recortes, paginação especial e formatos irregulares podem exigir outra margem. Confirme com quem instalará o piso.</p></details></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-grid"><div><a class="logo footer-logo" href="/">calculapiso</a><p>Uma conta mais clara para comprar melhor.</p></div><div><strong>Ferramentas</strong><a href="/#calculadora">Calculadora completa</a><a href="/quantas-caixas-de-piso">Caixas de piso por m²</a><a href="/argamassa-porcelanato-90x90">Argamassa para 90 × 90</a></div><div><strong>Informações</strong><a href="/sobre">Sobre</a><a href="/privacidade">Privacidade</a></div></div></footer>
+</body>
+</html>
